@@ -1,0 +1,21 @@
+body {
+    font-size: 80%;
+}
+h1 {
+    font-size: 100%;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li { 
+    list-style-type: none;
+    padding: 5px 0;
+    border-bottom: 1px solid #DDD;
+    white-space: nowrap;
+}
+p {
+    white-space: nowrap;
+}
