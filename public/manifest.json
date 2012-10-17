@@ -1,8 +1,8 @@
 {
     "name": "りんかい線 東雲駅時刻表",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "manifest_version": 2,
-    "description": "りんかい線 東雲駅時刻表。直近1時間の電車を表示します。今のところ平日のみ対応。",
+    "description": "りんかい線 東雲駅時刻表。直近1時間の電車を表示します。週末は対応していますが、今のところ祝日は未対応。",
     "browser_action": {
         "default_icon": "icon/icon19.png",
         "default_popup": "timeTable.html"
