@@ -40,6 +40,23 @@ describe("TimeTable", function() {
         expect(train.arrivalStation).toEqual("新木場");
     });
 
+    it("週末か判定する", function() {
+        var date1 = new Date(2012, 9, 15); // 月
+        var date2 = new Date(2012, 9, 16); // 火 
+        var date3 = new Date(2012, 9, 17); // 水
+        var date4 = new Date(2012, 9, 18); // 木
+        var date5 = new Date(2012, 9, 19); // 金
+        var date6 = new Date(2012, 9, 20); // 土
+        var date7 = new Date(2012, 9, 21); // 日
+        expect(timeTable.isWeekend(date1)).toBeFalsy();
+        expect(timeTable.isWeekend(date2)).toBeFalsy();
+        expect(timeTable.isWeekend(date3)).toBeFalsy();
+        expect(timeTable.isWeekend(date4)).toBeFalsy();
+        expect(timeTable.isWeekend(date5)).toBeFalsy();
+        expect(timeTable.isWeekend(date6)).toBeTruthy();
+        expect(timeTable.isWeekend(date7)).toBeTruthy();
+    });
+
     describe("DOMへの出力", function() {
 
         var testH1;

@@ -11,9 +11,17 @@ function TimeTable() {
         var timeTable = [];
         var timeTableData = new TimeTableData();
         if(_trainDirection == TRAIN_DIRECTION_INBOUND) {
-            timeTable = timeTableData.WEEKDAY_INBOUND;
+            if(isWeekend(new Date())) {
+                timeTable = timeTableData.WEEKEND_INBOUND;
+            } else {
+                timeTable = timeTableData.WEEKDAY_INBOUND;
+            }
         } else {
-            timeTable = timeTableData.WEEKDAY_OUTBOUND;
+            if(isWeekend(new Date())) {
+                timeTable = timeTableData.WEEKEND_OUTBOUND;
+            } else {
+                timeTable = timeTableData.WEEKDAY_OUTBOUND;
+            }
         }
 
         var trains = [];
@@ -76,6 +84,10 @@ function TimeTable() {
         return h + ":" + m;
     }
 
+    function isWeekend(date) {
+        return (date.getDay() == 0 || date.getDay() == 6);
+    }
+
     function format2Didits(n) {
         if(String(n).length > 2) {
             throw "ERROR";
@@ -89,7 +101,8 @@ function TimeTable() {
         formatDate: formatDate,
         format2Didits: format2Didits,
         outputTitle: outputTitle,
-        outputTimeTable: outputTimeTable
+        outputTimeTable: outputTimeTable,
+        isWeekend: isWeekend 
     };
 
 }
