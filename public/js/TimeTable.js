@@ -11,9 +11,9 @@ function TimeTable() {
         var timeTable = [];
         var timeTableData = new TimeTableData();
         if(_trainDirection == TRAIN_DIRECTION_INBOUND) {
-            timeTable = timeTableData.INBOUND;
+            timeTable = timeTableData.WEEKDAY_INBOUND;
         } else {
-            timeTable = timeTableData.OUTBOUND;
+            timeTable = timeTableData.WEEKDAY_OUTBOUND;
         }
 
         var trains = [];

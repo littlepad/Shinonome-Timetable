@@ -40,7 +40,7 @@ describe("TimeTable", function() {
         expect(train.arrivalStation).toEqual("新木場");
     });
 
-    describe("出力系", function() {
+    describe("DOMへの出力", function() {
 
         var testH1;
         var testDiv;
