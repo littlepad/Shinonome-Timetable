@@ -11,8 +11,8 @@
 #   - dist/**/*.js
 #
 src_files:
-    - public/js/Train.js
-    - public/js/TimeTable.js
+    - src/Train.js
+    - src/TimeTable.js
 
 # stylesheets
 #
